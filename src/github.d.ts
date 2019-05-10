@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
 interface Issue {
   createIssue(issueData: any, cb: any): any,
