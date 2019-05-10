@@ -159,7 +159,6 @@ export default class Form extends Vue {
 
   @Watch('$route')
   onRouteChanged() {
-    console.log('onRouteChanged');
     if (this.$route.params.id) {
       this.loadIssue(this.$route.params.id);
       return;
