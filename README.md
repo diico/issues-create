@@ -1,5 +1,7 @@
 # issues-create
 
+O projeto foi criado com o vue-cli, deixo abaixo as instruções de execução do mesmo.
+
 ## Project setup
 ```
 yarn install

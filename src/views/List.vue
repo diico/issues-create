@@ -142,8 +142,12 @@ export default class List extends Vue {
       case 1:
         state = 'closed';
         break;
-      default:
+      case 2:
         state = 'all';
+        break;
+      default:
+        this.toggle = 2;
+        return;
     }
     this.loadIssues({ state });
   }

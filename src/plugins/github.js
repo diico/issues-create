@@ -3,7 +3,7 @@ import Vue from 'vue';
 const GitHub = require('github-api');
 
 const github = new GitHub({
-  token: '24a88f2eff5a165772ff4a88b93fc57efe74ba08',
+  token: 'ee45e98d8699e875b31597c6b1a8a4744e2702c5',
 });
 
 const remoteIssues = github.getIssues('diico', 'issues-create');

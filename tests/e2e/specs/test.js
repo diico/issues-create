@@ -1,8 +1,16 @@
 // https://docs.cypress.io/api/introduction/api.html
 
-describe('My First Test', () => {
-  it('Visits the app root url', () => {
+describe('Listagem de issue', () => {
+  it('Verifica se a página foi renderizada', () => {
     cy.visit('/');
-    cy.contains('h1', 'Welcome to Your Vue.js + TypeScript App');
+    cy.get('button.success')
+      .should('have.length', 1);
+  });
+
+  it('Verifica filtro do grid', () => {
+    cy.visit('/');
+    cy.get('input')
+      .type('Busca por conteúdo não encontrado');
+    cy.get('table tr').should('have.length', 3);
   });
 });
