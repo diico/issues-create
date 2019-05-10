@@ -1,29 +1,44 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app >
+    <v-toolbar app dark>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Issues Project</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        flat
+        href="https://github.com/diico/issues-create"
+        target="_blank"
+      >
+        <span class="mr-2">Último Release</span>
+        <v-icon>fas fa-external-link-alt</v-icon>
+      </v-btn>
+    </v-toolbar>
+
+    <v-content>
+      <router-view class="mb-5"/>
+    </v-content>
+
+    <v-footer
+        dark
+        height="auto"
+        fixed
+      >
+      <v-card
+        class="flex"
+        flat
+        tile
+      >
+        <v-card-actions class="grey darken-3 justify-center">
+          &copy;2019 — <strong>Valdir Botingnon</strong>
+        </v-card-actions>
+      </v-card>
+    </v-footer>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<script>
+export default {
+  name: 'App',
+};
+</script>

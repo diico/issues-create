@@ -14,6 +14,8 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'no-debugger': 'off',
+    'no-underscore-dangle': 'off',
+    'no-param-reassign': [2, {"props": false}],
   },
 
   parserOptions: {
